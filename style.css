@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+}
+
+html,
+body {
+    overflow-x: hidden;
+
+
+}
+
+.main {
+    height: auto;
+    width: 100vw;
+    position: relative;
+}
+
+.page1 {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('first_kv_bg.jpg');
+}
+
+.trail-img {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+    pointer-events: none; /* Allows clicking through images */
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 1000;
+}
+
+.page1_mask_image {
+    width: 75vw;
+    height: 75vh;
+
+    -webkit-mask-image: url('./EMFIO TRANSPARENT.png');
+    mask-image: url('./EMFIO TRANSPARENT.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    background-color: transparent;
+    position: relative;
+    /* Added to contain absolute children */
+}
+
+.page1_mask_inner_image_1 {
+    position: absolute;
+    height: 80vh;
+    width: 75vw;
+    background: url('download-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    
+}
+
+.page1_mask_inner_image_2 {
+    position: absolute;
+    height: 75vh;
+    width: 75vw;
+    z-index: 1;
+    top: 0%;
+    /* Position below the first image */
+    left: 0;
+    will-change: trasform;
+}
+
+.page1_mask_inner_image_2 video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+}
