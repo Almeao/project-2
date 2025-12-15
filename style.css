@@ -33,7 +33,8 @@ body {
     height: 100px;
     object-fit: contain;
     border-radius: 8px;
-    pointer-events: none; /* Allows clicking through images */
+    pointer-events: none;
+    /* Allows clicking through images */
     transform: translate(-50%, -50%) scale(0);
     z-index: 1000;
 }
@@ -42,40 +43,87 @@ body {
     width: 75vw;
     height: 75vh;
 
-    -webkit-mask-image: url('./EMFIO TRANSPARENT.png');
-    mask-image: url('./EMFIO TRANSPARENT.png');
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
+}
 
-    background-color: transparent;
+
+
+.page1_mask_image {
+    width: 50vw;
+    height: 75vh;
+    overflow: hidden;
+
+    background-color: rgba(255, 0, 0, 0.262);
     position: relative;
     /* Added to contain absolute children */
+    -webkit-mask-image: url('#svgMask');
+    mask-image: url('#svgMask');
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+    mask-position: center center;
+    mask-mode: alpha;
 }
+
+
+/* .page1_mask_image_svg 
+{
+    width: 50vw;
+    height: 75vh;
+    z-index: 999;
+    position: absolute;
+    
+    
+}
+.page1_mask_image_svg svg
+{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+    
+    
+} */
+
+/* 
+.page1_mask_image_svg svg path
+{
+    z-index: 999;
+    fill:blue;
+} */
+
+
+
 
 .page1_mask_inner_image_1 {
     position: absolute;
-    height: 80vh;
-    width: 75vw;
+    top: 0;
+    left: 0;
+    height: 75vh;
+    width: 50vw;
     background: url('download-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2;
-    
+    z-index: 3;
+
+    /* Use the SVG <mask> via mask and -webkit-mask, fallback to none if not supported */
+    mask-image: none;
+    -webkit-mask-image: none;
 }
+
+/* Use a parent selector to apply the SVG mask on the container instead of the .page1_mask_inner_image_1 directly */
 
 .page1_mask_inner_image_2 {
     position: absolute;
     height: 75vh;
-    width: 75vw;
+    width: 50vw;
     z-index: 1;
     top: 0%;
     /* Position below the first image */
     left: 0;
     will-change: trasform;
+
+
+
 }
 
 .page1_mask_inner_image_2 video {

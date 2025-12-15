@@ -103,15 +103,45 @@ function spawnImage(x, y) {
 
 
 // Animate the .page1_mask_inner_image_1 moving up
-gsap.to(".page1_mask_inner_image_1", {
-  y: "-100%", 
-  ease: "none",
+// Create a timeline for both the .page1_mask_inner_image_1 movement and the SVG mask path animations
+const tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".page1",  
-    start: "top top",   
-    end: "+=150%",      
-    scrub: true,        
-    pin: true,         
- }
+    trigger: ".page1",
+    start: "top top",
+    end: "+=250%",
+    scrub: true,
+    pin: true,
+    //markers: true // Uncomment for debugging
+  }
 });
+
+// Animate .page1_mask_inner_image_1 moving up
+tl.to(".page1_mask_inner_image_1", {
+  y: "-100%",
+  ease: "none",
+}); // Start immediately at time 0
+
+
+
+
+// Animate all SVG mask paths - staggered within the same timeline
+
+
+const maskPaths = document.querySelectorAll('.mask-path');
+tl.to(maskPaths, {
+  scale: 20,
+  rotation: 0,
+  transformOrigin: "center center",
+  ease: "power2.inOut",
+  stagger: 0.03,
+  duration: 1,
+},"maskimage"); // Start at the same time as the first animation
+tl.to(".page1_mask_image", {
+  scale: 3,
+  rotation: 0,
+  transformOrigin: "center center",
+  ease: "power2.inOut",
+
+  duration: 1,
+},"maskimage"); // Start at the same time as the first animation
 
