@@ -131,38 +131,69 @@ tl.to(".page1_mask_inner_image_1", {
 tl.to(".mask-path_hight", {
   scaleY: 20,
   rotation: 0,
+  opacity: 0,
   transformOrigin: "center center",
   ease: "power2.inOut",
- 
+
   duration: 1,
-},"maskimage");
+}, "maskimage");
 
 tl.to(".mask-path_center", {
   scale: 0,
   rotation: 0,
+
   transformOrigin: "center center",
   ease: "power2.inOut",
 
   duration: 1,
-},"maskimage");
+}, "maskimage");
 
 tl.to(".mask-path_width", {
-  scaleX:20,
+  scaleX: 20,
   rotation: 0,
+  opacity: 0,
   transformOrigin: "center center",
   ease: "power2.inOut",
 
   duration: 1,
-},"maskimage");
+}, "maskimage");
 
 
 // Start at the same time as the first animation
 tl.to(".page1_mask_image", {
   scale: 15,
-  rotation: 50,
+  opacity: 0,
+  // rotation: 50,
   transformOrigin: "center center",
   ease: "power2.inOut",
 
   duration: 1,
-},"maskimage"); // Start at the same time as the first animation
+
+
+}
+
+  , "maskimage"); // Start at the same time as the first animation
+
+tl.to(".page1_mask_inner_image_2", {
+  opacity: 0,
+
+
+  ease: "power2.inOut",
+
+  duration: 1,
+  // Set .page1 background size to 100% at the start
+  onStart: function () {
+
+  },
+
+}, "maskimage"); // Start at the same time as the first animation
+
+
+tl.to(".page1_background_image", 
+{ 
+    opacity:1, 
+    //  duration: 1,
+     delay:0.4,
+      ease: "power2.inOut"
+}, "maskimage");
 

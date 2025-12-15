@@ -24,8 +24,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('first_kv_bg.jpg');
+    background-color: black; 
+  
 }
+.page1_background_image {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+ 
+    background-image: url('download.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0;
+    /* background-size: 0%; */
+    background-position:center ;
+}
+
 
 .trail-img {
     position: absolute;
@@ -52,7 +66,8 @@ body {
     height: 75vh;
     overflow: hidden;
 
-    background-color: rgba(255, 0, 0, 0.262);
+    /* background-color: transparent; */
+    background-color: aqua;
     position: relative;
     /* Added to contain absolute children */
     -webkit-mask-image: url('#svgMask');
@@ -116,21 +131,19 @@ body {
 
 .page1_mask_inner_image_2 {
     position: absolute;
-    height: 75vh;
-    width: 50vw;
+    height: 100vh;
+    width: 100vw;
     z-index: 1;
     top: 0%;
-    /* Position below the first image */
+
     left: 0;
     will-change: trasform;
+    background-image: url('download.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
 
    
 }
 
-.page1_mask_inner_image_2 video {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    display: block;
-}
+
