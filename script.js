@@ -108,7 +108,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".page1",
     start: "top top",
-    end: "+=250%",
+    end: "+=300%",
     scrub: true,
     pin: true,
     //markers: true // Uncomment for debugging
@@ -127,47 +127,39 @@ tl.to(".page1_mask_inner_image_1", {
 // Animate all SVG mask paths - staggered within the same timeline
 
 
-tl.to(".mask-path_1_to_4", {
-  scale: 20,
+
+tl.to(".mask-path_hight", {
+  scaleY: 20,
   rotation: 0,
   transformOrigin: "center center",
   ease: "power2.inOut",
-  stagger: 0.03,
+ 
   duration: 1,
 },"maskimage");
 
-tl.to(".mask-path_5_to_8", {
-  scale: 20,
+tl.to(".mask-path_center", {
+  scale: 0,
   rotation: 0,
   transformOrigin: "center center",
   ease: "power2.inOut",
-  stagger: 0.03,
+
   duration: 1,
 },"maskimage");
 
-tl.to(".mask-path_9_to_12", {
-  scale: 20,
+tl.to(".mask-path_width", {
+  scaleX:20,
   rotation: 0,
   transformOrigin: "center center",
   ease: "power2.inOut",
-  stagger: 0.03,
-  duration: 1,
-},"maskimage");
 
-tl.to(".mask-path_13_to_16", {
-  scale: 20,
-  rotation: 0,
-  transformOrigin: "center center",
-  ease: "power2.inOut",
-  stagger: 0.03,
   duration: 1,
 },"maskimage");
 
 
 // Start at the same time as the first animation
 tl.to(".page1_mask_image", {
-  scale: 3,
-  rotation: 0,
+  scale: 15,
+  rotation: 50,
   transformOrigin: "center center",
   ease: "power2.inOut",
 

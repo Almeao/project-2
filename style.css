@@ -59,6 +59,8 @@ body {
     mask-image: url('#svgMask');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
+    -webkit-mask-size: 100vw 100vh;
+    mask-size: 100vw 100vh;
     -webkit-mask-position: center center;
     mask-position: center center;
     mask-mode: alpha;
@@ -104,7 +106,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 3;
-
+    
     /* Use the SVG <mask> via mask and -webkit-mask, fallback to none if not supported */
     mask-image: none;
     -webkit-mask-image: none;
@@ -123,7 +125,7 @@ body {
     will-change: trasform;
 
 
-
+   
 }
 
 .page1_mask_inner_image_2 video {
