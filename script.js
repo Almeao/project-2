@@ -44,7 +44,7 @@ let imageIndex = 0;
 let lastX = 0;
 let lastY = 0;
 // Decrease the threshold to reduce space between images (closer spacing)
-const threshold = 25;
+const threshold = 50;
 
 // Listen for mouse moves inside the .page1 div
 activeZone.addEventListener('mousemove', (e) => {
@@ -88,15 +88,16 @@ function spawnImage(x, y) {
     .to(img, {
       scale: 1,
       duration: 0.18,     // much faster "pop in"
-      ease: "back.out(1.7)"
+      ease: "expoScale(0.5,7,power2.inOut)",
     })
     .to(img, {
       opacity: 0,
       scale: 0.5,
       y: 0,
-      duration: 1,     // much faster "fade out"
+      rotation: (Math.random() < 0.5 ? -1 : 1) * (50 + Math.random() * 30),
+      duration: 2,     // much faster "fade out"
       delay: 0.07,     // small delay so effect is visible but quick overall
-      ease: "back.out(1.7)"
+      ease: "expoScale(0.5,7,power2.inOut)",
     });
 }
 
@@ -193,6 +194,7 @@ tl.to(".page1_background_image",
 { 
     opacity:1, 
     //  duration: 1,
+
      delay:0.4,
       ease: "power2.inOut"
 }, "maskimage");

@@ -52,34 +52,40 @@ body {
     transform: translate(-50%, -50%) scale(0);
     z-index: 1000;
 }
-
+/* 
 .page1_mask_image {
     width: 75vw;
     height: 75vh;
 
-}
+} */
 
 
 
 .page1_mask_image {
-    width: 50vw;
-    height: 75vh;
-    overflow: hidden;
+    /* Center the mask container absolutely in .page1 */
 
-    /* background-color: transparent; */
-    background-color: aqua;
-    position: relative;
-    /* Added to contain absolute children */
+    width: 75vh;
+    height: 75vh;
+    aspect-ratio: 1/1;
+
+    overflow: hidden;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Perfectly accurate SQUARE mask using SVG <mask> with objectBoundingBox units, centered */
     -webkit-mask-image: url('#svgMask');
     mask-image: url('#svgMask');
     -webkit-mask-repeat: no-repeat;
     mask-repeat: no-repeat;
-    -webkit-mask-size: 100vw 100vh;
-    mask-size: 100vw 100vh;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
     -webkit-mask-position: center center;
     mask-position: center center;
     mask-mode: alpha;
 }
+
 
 
 /* .page1_mask_image_svg 
@@ -138,12 +144,21 @@ body {
 
     left: 0;
     will-change: trasform;
-    background-image: url('download.jpg');
+    /* background-image: url('download.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 
 
    
 }
 
 
+
+
+.page1_mask_inner_image_2 video
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
