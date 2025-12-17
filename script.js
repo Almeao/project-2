@@ -43,11 +43,40 @@ const images = [
 let imageIndex = 0;
 let lastX = 0;
 let lastY = 0;
-// Decrease the threshold to reduce space between images (closer spacing)
-const threshold = 50;
+const threshold = 20;
+
+// We'll enable/disable animation with this flag
+let cursorTrailEnabled = true;
+
+// Helper: Get absolute pixels for 150vh
+function get150vh() {
+  return window.innerHeight * 1.5;
+}
+
+// Check scroll amount and enable/disable cursor trail
+function checkCursorTrail() {
+  // Distance user has scrolled from top
+  let scrolled = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrolled >= get150vh()) {
+    cursorTrailEnabled = false;
+  } else {
+    cursorTrailEnabled = true;
+  }
+}
+
+// Listen for scroll events
+window.addEventListener('scroll', checkCursorTrail);
+// Also recheck on resize (as vh unit may change)
+window.addEventListener('resize', checkCursorTrail);
+
+// Initial state
+checkCursorTrail();
 
 // Listen for mouse moves inside the .page1 div
 activeZone.addEventListener('mousemove', (e) => {
+  if (!cursorTrailEnabled) return; // Stop creating images after 150vh scroll
+
   const rect = activeZone.getBoundingClientRect();
   const x = e.clientX - rect.left;
   const y = e.clientY - rect.top;
@@ -63,6 +92,7 @@ activeZone.addEventListener('mousemove', (e) => {
 
 // Reset last positions when entering to prevent a "jump"
 activeZone.addEventListener('mouseenter', (e) => {
+  if (!cursorTrailEnabled) return;
   const rect = activeZone.getBoundingClientRect();
   lastX = e.clientX - rect.left;
   lastY = e.clientY - rect.top;
@@ -87,7 +117,7 @@ function spawnImage(x, y) {
   })
     .to(img, {
       scale: 1,
-      duration: 0.18,     // much faster "pop in"
+      duration: 0.18,
       ease: "expoScale(0.5,7,power2.inOut)",
     })
     .to(img, {
@@ -95,8 +125,8 @@ function spawnImage(x, y) {
       scale: 0.5,
       y: 0,
       rotation: (Math.random() < 0.5 ? -1 : 1) * (50 + Math.random() * 30),
-      duration: 2,     // much faster "fade out"
-      delay: 0.07,     // small delay so effect is visible but quick overall
+      duration: 2,
+      delay: 0.07,
       ease: "expoScale(0.5,7,power2.inOut)",
     });
 }
