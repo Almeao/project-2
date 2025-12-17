@@ -43,8 +43,9 @@ function animateHeaderOnScroll() {
       gsap.to(headerTop, {
         height: "5vh",
         borderBottom: "0.5px solid #00000065",
-        duration: 0.4,
-        ease: "expoScale(1,2,power2.inOut)",
+        duration: 0.7,
+        ease: window.CustomEase ? CustomEase.create("custom", "M0,0 C1,0.012 0,1 1,1 ") : "power2.out",
+
   
         overwrite: "auto"
       });
@@ -54,7 +55,11 @@ function animateHeaderOnScroll() {
         height: "10vh",
         borderBottom: "none",
         duration: 0.4,
-        ease: "expoScale(1,2,power2.inOut)",
+        // Fix: Ensure CustomEase is loaded and registered with GSAP, and the name matches.
+        // If CustomEase is unavailable, fallback to a standard GSAP ease for now.
+        // To use a custom ease, ensure to include: 
+        // <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/CustomEase.min.js"></script>
+        ease: window.CustomEase ? CustomEase.create("custom", "M0,0 C1,0.012 0,1 1,1 ") : "power2.out",
         overwrite: "auto"
       });
     }
@@ -80,7 +85,7 @@ function animateHeaderOnScroll() {
   
     function onScroll() {
       const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 10) {
+      if (currentScrollY > lastScrollY && currentScrollY > 200) {
         // Scrolling down, hide header
         gsap.to(header, {
           y: "-100%",
@@ -132,8 +137,9 @@ function animateHeaderOnScroll() {
         opacity: 1,
         scrub: 5,
         stagger: 5,
-        duration: 0.4,
-        ease: "expoScale(1,2,power2.in)",
+        duration: 0.7,
+        ease: window.CustomEase ? CustomEase.create("custom", "M0,0 C3.81,0.012 -2.808,0.987 1,0.987 ") : "power2.out",
+
         overwrite: "auto"
       });
       headerTop1.style.borderBottom = "0.5px solid #00000065";
@@ -214,7 +220,7 @@ function animateHeaderOnScroll() {
         scrub: 5,
         stagger: 5,
         duration: 0.4,
-        ease: "expoScale(1,2,power2.in)",
+        ease: window.CustomEase ? CustomEase.create("custom", "M0,0 C3.81,0.012 -2.808,0.987 1,0.987 ") : "power2.out",
         overwrite: "auto"
       });
       headerTop1.style.borderBottom = "0.5px solid #00000065";
