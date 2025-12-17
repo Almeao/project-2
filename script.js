@@ -139,7 +139,7 @@ const tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".page1",
     start: "top top",
-    end: "+=300%",
+    end: "+=250%",
     scrub: true,
     pin: true,
     //markers: true // Uncomment for debugging
@@ -170,7 +170,7 @@ tl.to(".mask-path_hight", {
 }, "maskimage");
 
 tl.to(".mask-path_center", {
-  scale: 0,
+  scale: 20,
   rotation: 0,
 
   transformOrigin: "center center",

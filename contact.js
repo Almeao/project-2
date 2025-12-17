@@ -43,7 +43,7 @@ function animateHeaderOnScroll() {
       gsap.to(headerTop, {
         height: "5vh",
         borderBottom: "0.5px solid #00000065",
-        duration: 0.7,
+        duration: 1,
         ease: window.CustomEase ? CustomEase.create("custom", "M0,0 C1,0.012 0,1 1,1 ") : "power2.out",
 
   
@@ -54,7 +54,7 @@ function animateHeaderOnScroll() {
       gsap.to(headerTop, {
         height: "10vh",
         borderBottom: "none",
-        duration: 0.4,
+        duration: 1,
         // Fix: Ensure CustomEase is loaded and registered with GSAP, and the name matches.
         // If CustomEase is unavailable, fallback to a standard GSAP ease for now.
         // To use a custom ease, ensure to include: 
@@ -97,7 +97,7 @@ function animateHeaderOnScroll() {
         // Scrolling up, show header
         gsap.to(header, {
           y: "0%",
-          duration: 1,
+          duration: 1.5,
           ease: "power4.out",
           overwrite: true
         });
@@ -157,7 +157,7 @@ function animateHeaderOnScroll() {
         opacity: 0,
         scrub: 5,
         stagger: 5,
-        duration: 0.4,
+        duration: 0.5,
         ease: "expoScale(1,2,power2.inOut)",
         overwrite: "auto"
       });

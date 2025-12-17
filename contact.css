@@ -679,3 +679,83 @@ main {
 
 
 
+.part3
+{
+    height: 20vh;
+    width: 97vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.5px solid #0000009c;
+    font-family: font2;
+}
+.part3_sub1
+{
+    width: 50%;
+
+}
+.part3_sub1 h3
+{
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.part3_sub2
+{
+    width: 25%;
+
+}
+.part3_sub p
+{
+    color: #0000006e;
+}
+.part3_sub h4
+{
+    font-size: 1vw;
+    font-weight: 400;
+
+}
+.part3_sub3
+{
+    width: 25%;
+
+}
+
+
+.part4
+{
+    height: 20vh;
+    width: 97vw;
+    display: flex;
+    align-items: center;
+    /* border-bottom: 0.5px solid #0000009c; */
+    font-family: font2;
+}
+.part4_sub1
+{
+    width: 50%;
+
+}
+.part4_sub1 h3
+{
+    font-size: 2.5vw;
+    font-weight: 400;
+}
+.part4_sub2
+{
+    width: 25%;
+
+}
+.part4_sub p
+{
+    color: #0000006e;
+}
+.part4_sub h4
+{
+    font-size: 1vw;
+    font-weight: 400;
+
+}
+.part4_sub3
+{
+    width: 25%;
+
+}
