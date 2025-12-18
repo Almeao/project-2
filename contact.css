@@ -65,11 +65,13 @@ header {
     /* background-color: #ffffff; */
     padding-left: 20px;
 }
-.header_left img{
+
+.header_left img {
     object-fit: contain;
     height: 80%;
     width: 25%;
 }
+
 .header_right {
     width: 45%;
     display: flex;
@@ -553,10 +555,10 @@ main {
     transition: background-color 0.3s;
 }
 
-.part1 button i
-{
+.part1 button i {
     rotate: 45deg;
 }
+
 .part1 button i {
     rotate: 45deg;
     transition: rotate 0.3s;
@@ -581,8 +583,8 @@ main {
     /* padding-bottom: 5%; */
     border-bottom: 0.5px solid #0000009c;
 }
-.part2_card
-{
+
+.part2_card {
     background-color: #dcdcdc;
     height: 55vh;
     width: 48.5vw;
@@ -590,31 +592,31 @@ main {
     justify-content: center;
     align-items: center;
 }
-.part2_card_img
-{
+
+.part2_card_img {
     width: 45%;
     height: 100%;
     border: 0.5px solid #b4b4b49c;
 }
-.part2_card_img img
-{
+
+.part2_card_img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.part2_card_detail
-{
+
+.part2_card_detail {
     height: 100%;
     width: 55%;
     /* background-color: #681919; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    
+
 
 }
-.part2_card_detail_top
-{
+
+.part2_card_detail_top {
     width: 80%;
     height: 40%;
     /* background-color: aquamarine; */
@@ -624,21 +626,20 @@ main {
     justify-content: space-around;
 
 }
-.part2_card_detail_top h4
-{
+
+.part2_card_detail_top h4 {
     font-size: 2.5vw;
     font-weight: 400;
 }
-.part2_card_detail_top p
-{
+
+.part2_card_detail_top p {
     font-size: 1.3vw;
     font-weight: 300;
     color: #0000006e;
 }
 
 
-.part2_card_detail_bottam
-{
+.part2_card_detail_bottam {
     width: 80%;
     height: 40%;
     /* background-color: aquamarine; */
@@ -648,14 +649,13 @@ main {
     justify-content: space-around;
 }
 
-.part2_card_detail_bottam p
-{
+.part2_card_detail_bottam p {
     font-size: 1vw;
     font-weight: 400;
     color: #0000006e;
 }
-.part2_card_detail_bottam h6
-{
+
+.part2_card_detail_bottam h6 {
     font-size: 1vw;
     font-weight: 400;
     color: #000000;
@@ -664,10 +664,11 @@ main {
     /* background-color: #7f0e0e; */
 
 }
+
 .part2_card_detail_bottam h6 i {
     opacity: 0;
     rotate: 90deg;
-    transition: 
+    transition:
         opacity 0.3s ease,
         rotate 0.3s ease;
 }
@@ -679,8 +680,7 @@ main {
 
 
 
-.part3
-{
+.part3 {
     height: 20vh;
     width: 97vw;
     display: flex;
@@ -688,74 +688,288 @@ main {
     border-bottom: 0.5px solid #0000009c;
     font-family: font2;
 }
-.part3_sub1
-{
+
+.part3_sub1 {
     width: 50%;
 
 }
-.part3_sub1 h3
-{
+
+.part3_sub1 h3 {
     font-size: 2.5vw;
     font-weight: 400;
 }
-.part3_sub2
-{
+
+.part3_sub2 {
     width: 25%;
 
 }
-.part3_sub p
-{
+
+.part3_sub p {
     color: #0000006e;
 }
-.part3_sub h4
-{
+
+.part3_sub h4 {
     font-size: 1vw;
     font-weight: 400;
 
 }
-.part3_sub3
-{
+
+.part3_sub3 {
     width: 25%;
 
 }
 
 
-.part4
-{
+.part4 {
     height: 20vh;
     width: 97vw;
     display: flex;
     align-items: center;
-    /* border-bottom: 0.5px solid #0000009c; */
     font-family: font2;
 }
-.part4_sub1
-{
+
+.part4_sub1 {
     width: 50%;
 
 }
-.part4_sub1 h3
-{
+
+.part4_sub1 h3 {
     font-size: 2.5vw;
     font-weight: 400;
 }
-.part4_sub2
-{
+
+.part4_sub2 {
     width: 25%;
 
 }
-.part4_sub p
-{
+
+.part4_sub p {
     color: #0000006e;
 }
-.part4_sub h4
-{
+
+.part4_sub h4 {
     font-size: 1vw;
     font-weight: 400;
 
 }
-.part4_sub3
-{
+
+.part4_sub3 {
     width: 25%;
 
+}
+
+.part5 {
+    width: 97vw;
+    height: 100vh;
+    /* background-color: #000000; */
+    border-top: 0.5px solid #0000009c;
+    /* border-bottom: 0.5px solid #0000009c; */
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'font2';
+}
+.part5_left
+{
+    height: 90%;
+    width: 40%;
+    /* background-color: aquamarine; */
+}
+
+.part5_left p
+{
+    font-size: 1vw;
+    font-family: 'font3';
+    font-weight: 200;
+    color: #000000;
+   
+}
+.part5_left h3
+{
+    font-size: 3vw;
+    color: #000000;
+    font-weight: 400;
+
+}
+
+
+
+
+
+
+
+
+
+
+.part5_right
+{
+    height: 90%;
+    width: 50%;
+    /* background-color: aquamarine; */
+}
+
+
+
+
+
+
+:root {
+    --bg-color: #E6E6E6;
+    --text-color: #1a1a1a;
+    --border-color: #999;
+    --focus-color: #000;
+}
+
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    column-gap: 40px;
+    row-gap: 50px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Spanning full width for Message */
+.full-width {
+    grid-column: span 2;
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px 0;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-bottom: 1px solid var(--focus-color);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Custom Phone Input Styling */
+.phone-input-wrapper {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.phone-input-wrapper:focus-within {
+    border-bottom: 1px solid var(--focus-color);
+}
+
+.phone-code {
+    background: #dcdcdc;
+    border: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 5px; /* Visual alignment */
+    font-size: 0.9rem;
+    color: #555;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.phone-input-wrapper input {
+    border-bottom: none; /* Wrapper handles border */
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+/* Custom Select styling */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 5px;
+    background-size: 10px;
+}
+
+/* Bottom Action Area */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.form-actions i
+{
+    rotate: 45deg;
+}
+button {
+    background-color: #111;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+button span {
+    font-size: 1.2rem;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #999;
+    cursor: pointer;
+    /* Resetting default styles to allow custom sizing */
+    appearance: auto; 
+    margin: 0;
+    border-bottom: none; /* Override general input style */
+}
+
+.footer-note {
+    grid-column: span 2;
+    font-size: 0.75rem;
+    color: #777;
+    margin-top: -30px; /* Pull it closer to buttons */
+}
+
+.footer-note a {
+    color: #555;
+    text-decoration: underline;
 }
