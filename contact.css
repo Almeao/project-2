@@ -1111,12 +1111,13 @@ input[type="checkbox"] {
 
 footer
 {
-    width: 97vw;
+    width: 100vw;
     height: 85vh;
     /* background-color: royalblue; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 
 }
 .footer_up
@@ -1198,7 +1199,7 @@ footer
 
 .footer_down
 {
-    height: 30vh;
+    height: 20vh;
     width: 97vw;
     /* background-color: chocolate; */
 }
@@ -1224,7 +1225,7 @@ footer
 .footer_down_1_button
 {
     width: 10%;
-    height: auto;
+    /* height: 100%; */
     /* background-color: #dcdcdc; */
     display: flex;
     justify-content: center;
@@ -1233,7 +1234,6 @@ footer
 
 .footer_down_1_button button
 {
-    margin-bottom: 4%;
     width: auto;
     font-family: 'font2';
 
@@ -1241,9 +1241,9 @@ footer
     font-weight: 300;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    /* gap: 10px; */
     text-decoration: none;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     background-color: transparent;
     color: #ffffff;
     padding: 10px 20px;
@@ -1262,10 +1262,50 @@ footer
     width: 10%;
     height: 100%;
     /* background-color: #dcdcdc; */
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    /* margin-bottom: 4%; */
+
+}
+.footer_down_1_time_data_all p
+{
+    font-family: 'font1';
+    font-size: 0.9vw;
+    font-weight: 100;
+    line-height: 17px;
+    color: white;
 }
 .footer_down_1_animate_logo
 {
     width: 10%;
     height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
     /* background-color: #dcdcdc; */
+}
+
+
+
+
+.footer_down_2_outer
+{
+    height: 5vh;
+    width: 100vw;
+    
+    border-top:0.5px solid #ffffff47;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer_down_2_outer p
+{
+    font-family: 'font2';
+    font-size: 1vw;
+    color: #e6e7e8;
+    font-weight: 300;
+
 }
