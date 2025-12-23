@@ -22,7 +22,16 @@ const lenis = new Lenis({
   
 
 
-
+  gsap.to("[data-speed]", {
+    y: (i, el) => (1 - parseFloat(el.getAttribute("data-speed"))) * ScrollTrigger.maxScroll(window),
+    ease: "none",
+    scrollTrigger: {
+      start: 0,
+      end: "max",
+      invalidateOnRefresh: true,
+      scrub: 0,
+    }
+  });
 
 
 // Your code is not working because you are using `duration2` instead of a valid duration value (should be a number like 1, 1.2, etc.)
@@ -120,21 +129,10 @@ function animateHeaderOnScroll() {
   
   
   
-
   // Make sure .bottam is set to y:100% initially (hidden off screen)
   gsap.set(".bottam", {
     y: "100%",
   });
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -212,6 +210,9 @@ function animateHeaderOnScroll() {
   })();
 
 
+  
+  
+  
   
   const btn1 = document.querySelector('.header_top_option_1');
   const curtain1 = document.querySelector('.headder_container1_cover');
@@ -376,15 +377,12 @@ function animateHeaderOnScroll() {
   
   }
   
-  // Animate .tikker to come in from y 100% using gsap.from with ScrollTrigger
 
-
-    // Add click event handler to .header_container_2_part1 to go to our_story.html
-    document.querySelectorAll('.header_container_2_part1').forEach(function(el) {
-      el.addEventListener('click', function() {
-        window.location.href = "our_story.html";
-      });
+  document.querySelectorAll('.header_container_2_part1').forEach(function(el) {
+    el.addEventListener('click', function() {
+      window.location.href = "our_story.html";
     });
+  });
 
 
 
@@ -404,16 +402,6 @@ function animateHeaderOnScroll() {
 
 
 
-    gsap.from(".tikker", {
-      y: "100%",
-      duration: 1,
-      ease: "power4.in",
-      scrollTrigger: {
-        trigger: ".part7",
-        start: "top 50%",
-        toggleActions: "play none none none"
-      }
-    });
 
 
 
@@ -421,6 +409,13 @@ function animateHeaderOnScroll() {
 
 
 
-
-    
-
+  gsap.from(".tikker", {
+    y: "100%",
+    duration: 1,
+    ease: "power4.in",
+    scrollTrigger: {
+      trigger: ".part7",
+      start: "top 50%",
+      toggleActions: "play none none none"
+    }
+  });
