@@ -11,6 +11,12 @@ body {
 
 }
 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 .main {
     height: auto;
     width: 100vw;

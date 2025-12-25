@@ -580,265 +580,7 @@ main {
 
 
 
-
 .part2 {
-    height: 150vh;
-    width: 97vw;
-    color: #000;
-    /* padding-bottom: 5%; */
-    display: flex;
-    /* justify-content: space-between; */
-    /* align-items: center; */
-    flex-direction: column;
-    gap: 20px;
-    font-family: 'font2';
-    /* background-color: aqua; */
-    /* margin-top: 5%; */
-    /* padding-bottom: 5%; */
-    border-bottom: 0.5px solid #0000009c;
-}
-.part2 h3
-{
-    font-family: 'font2';
-    font-weight: 400;
-    font-size: 3.3vw;
-}
-.part2_data
-{
-    width: 97vw;
-    height: 120vh;
-    margin-top: 5%;
-    /* background-color: yellow; */
-    display: flex;
-    /* justify-content: space-between; */
-
-}
-.part2_data_left
-{
-    width: 50%;
-    height: 100%;
-    /* background-color: tomato; */
-    position: relative;
-    overflow: hidden;
-}
-
-.part2_data_left_img {
-    width: 100%;
-    height: 80%;
-  
-
-    /* Make sure the image under the cover is fully shown, the cover will show only the image inside */
-    /* No opacity here */
-}
-
-.part2_data_left_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  
-
-    /* Make sure the image under the cover is fully shown, the cover will show only the image inside */
-    /* No opacity here */
-}
-
-
-
-
-
-.part2_data_right
-{
-    width: 32%;
-    height: 100%;
-    /* margin-top: 5%; */
-    /* background-color: violet; */
-    margin-left: 10%;
-}
-
-.part2_data_right_img
-{
-    width: 100%;
-    height: 60%;
-}
-.part2_data_right_img img
-{
-    width: 100%;
-    height: 100%;
-    /* object-fit: contain; */
-}
-
-
-.part2_data_right_detail
-{
-    width: 100%;
-    height: 40%;
-    margin-top: 5%;
-    font-family: 'font2';
-}
-
-.part2_data_right_detail h6
-{
-    font-size: 0.7vw;
-    font-weight: 400;
-    font-family: 'font1';
-}
-
-.part2_data_right_detail h5
-{
-    font-size: 1.6vw;
-    font-weight: 400;
-    margin-top: 5%;
-}
-.part2_data_right_detail h5 span
-{
-    font-size: 0.9vw;
-    font-weight: 400;
-    color: #686563;
-
-
-}
-
-
-.part2_data_right_detail p
-{
-    font-size: 1.1vw;
-    font-weight: 300;
-    margin-top: 5%;
-    font-family: 'font2';
-    color: #686563;
-
-}
-
-
-
-
-
-
-
-
-.part3 {
-    height: 280vh;
-    width: 100vw;
-display: flex;
-flex-direction: column;
-align-items: center;
-/* background-color: #000000; */
-    /* border-bottom: 0.5px solid #0000009c; */
-    font-family: font2;
-    
-}
-
-.part3_upper
-{
-    width: 97vw;
-    height: 40vh;
-    margin-top: 5%;
-    /* background-color: violet; */
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    color: #000;
-}
-.part3_upper p
-{
-    width: 15%;
-    font-family: 'font1';
-    font-weight: 300;
-    font-size: 0.9vw;
-    margin-top: 2%;
-
-}
-.part3_upper h6
-{
-    width: 85%;
-    font-family: 'font3';
-    font-weight: 400;
-    font-size:3.2vw;
-}
-
-
-.part3_img
-{
-    height: 100vh;
-    width: 100vw;
-    background-color: #797762;
-    /* overflow: hidden; */
-}
-.part3_img img
-{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-.part3_loower
-{
-    height: 130vh;
-    width: 100vw;
-    background-color: #797762;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-}
-
-.part3_loower_inner
-{
-    height: 90%;
-    width:  80%;
-    /* background-color: #000000; */
-}
-.part3_loower_inner p
-{
-    font-family: 'font3';
-    font-size: 4.5vw;
-    color: #ffffff;
-    
-}
-
-.part3_loower_inner_sign_img
-{
-    height: 50px;
-    width: 150px;
-    margin-top: 5%;
-    /* background-color: tomato; */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-.part4 {
-    min-height: 90vh;
-    width: 97vw;
-    display: flex;
-    justify-content: space-between;
-    font-family: font2;
-    background-color: yellow;
-    position: relative;
-    box-sizing: border-box;
-}
-
-
-
-.part4_left_inner
-{
-    height: 50%;
-    width: 50%;
-    background-color: #1a4e5c;
-    position: sticky;
-      top: 0px;  
-} */
-
-
-
-.part4 {
     min-height: 100vh;     /* IMPORTANT */
     width: 97vw;
     display: flex;
@@ -850,14 +592,14 @@ align-items: center;
 }
 
 /* parent left column */
-.part4_left {
+.part2_left {
     width: 50%;
     height: 90vh;
     position: relative;
 }
 
 /* sticky element */
-.part4_left_inner {
+.part2_left_inner {
     height: auto;          /* avoid % height for sticky */
     width: 60%;
     /* background-color: #1a4e5c; */
@@ -866,20 +608,28 @@ align-items: center;
 }
 
 
-.part4_left_inner p
+.part2_left_inner p
 {
     font-family: 'font3';
     font-weight: 300;
     font-size: 0.9vw;
 }
-.part4_left_inner h5
+.part2_left_inner h5
 {
     font-family: 'font2';
     font-weight: 400;
     font-size: 2vw;
     margin-top: 5%;
 }
-.part4_left_inner a
+.part2_left_inner h6
+{
+    font-family: 'font2';
+    font-weight: 400;
+    font-size: 1vw;
+    margin-top: 5%;
+    color: #686563;
+}
+.part2_left_inner a
 {
     margin-bottom: 4%;
     width: auto;
@@ -892,26 +642,29 @@ align-items: center;
     gap: 10px;
     text-decoration: none;
     margin-top: 5%;
-    background-color: #000;
-    color: #fff;
+    background-color: #e6e7e8;
+    color: #000000;
     padding: 8px 20px;
     border-radius: 20px;
-    border: none;
+    border: 0.5px solid #7f7f7ffd;
 }
 
-.part4_left_inner a i {
-    transform: rotate(45deg);
+.part2_left_inner a  {
+
 
     transition: transform 0.3s;
 }
 
-.part4_left_inner a:hover i {
-    transform: rotate(90deg);
+.part2_left_inner a:hover  {
+ 
+    border: 0.7px solid #000;
+ 
+ 
 }
 
 
 
-.part4_right
+.part2_right
 {
     height: 80vh;
     width: 45%;
@@ -919,7 +672,7 @@ align-items: center;
 }
 
 
-.part4_right img
+.part2_right img
 {
     height: 100%;
     width: 100%;
@@ -929,15 +682,60 @@ align-items: center;
 
 
 
+.part3
+{
+    height: 23vh;
+    width: 97vw;
+    display: flex;
+    padding-bottom: 5%;
+    justify-content: space-between;
+    /* background-color: #943636; */
+    border-bottom: 0.5px solid #0000009c;
+}
+.part3_left
+{
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+
+}
+
+
+
+.part3_left p
+{
+    font-family: 'font3';
+    font-size: 1vw;
+    font-weight: 200;
+    color: #000;
+}
+
+.part3_right
+{
+
+    height: 100%;
+    width: 50%;
+    margin-right: 10%;
+    /* background-color: violet; */
+}
+.part3_right p
+{
+    font-family: 'font2';
+    font-size: 3vw;
+    font-weight: 400;
+    color: #000;
+}
 
 
 
 
 
-
-
-
-
+.part4
+{
+    
+}
 
 
 

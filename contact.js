@@ -1,7 +1,7 @@
 // Initialize Lenis for smooth slow scrolling with easing
 const lenis = new Lenis({
     smooth: true,
-    lerp: 0.05, // smaller value for slower, smoother scroll (default is 0.1)
+    lerp: 0.02, // smaller value for slower, smoother scroll (default is 0.1)
     duration: 1.2, // in seconds, slow it down further for a "perfect" controlled scroll
     wheelMultiplier: 0.7, // reduce mousewheel speed, play with value for desired "slowness"
     easing: (t) => 1 - Math.pow(1 - t, 3) // Add cubic easing (easeOutCubic)
