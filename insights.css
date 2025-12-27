@@ -596,7 +596,7 @@ main {
 
 /* parent left column */
 .part2_left {
-    width: 50%;
+    width: 45%;
     height: 90vh;
     /* position: relative; */
 }
@@ -677,7 +677,7 @@ main {
 .part2_right
 {
     height: 80vh;
-    width: 45%;
+    width: 55%;
     
 }
 
